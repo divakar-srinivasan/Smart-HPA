@@ -674,7 +674,35 @@ Contributions should preserve the repository’s core intent: demonstrating **pr
 
 ---
 
-## 16. Contact 📬
+## 16. Screenshot 🖼️
+
+<img width="1656" height="1021" alt="Kubernetes Cluster and HPA Monitoring" src="https://github.com/user-attachments/assets/508d6a43-9794-41c7-aa38-a5c6ff0736ed" />
+
+Figure 1.1: Verification of Kubernetes cluster status, running pods, CPU resource metrics, and Horizontal Pod Autoscaler (HPA) configuration using kubectl commands.
+
+<img width="1307" height="152" alt="Screenshot 2026-01-05 090924" src="https://github.com/user-attachments/assets/164ea1af-23fe-4934-a791-eaa48e6471e7" />
+
+Figure 1.2: Kubernetes service configuration displaying ClusterIP and NodePort services for Order, Payment, and Notification microservices, enabling external access and internal communication within the cluster.
+
+<img width="1002" height="485" alt="Screenshot 2026-01-05 090719" src="https://github.com/user-attachments/assets/ab20fb95-484c-4b86-a799-798297b39554" />
+
+Figure 1.3: Verification of running Kubernetes pods and real-time resource utilization (CPU and memory) using kubectl commands, demonstrating active microservices and cluster monitoring.
+
+<img width="1176" height="101" alt="Screenshot 2026-01-05 090429" src="https://github.com/user-attachments/assets/7e706f6e-9dd0-47dc-8571-be61d8c507d8" />
+
+Figure 1.4: Real-time monitoring of Horizontal Pod Autoscaler (HPA) showing CPU utilization and dynamic scaling of microservices based on defined thresholds.
+
+<img width="1169" height="129" alt="Screenshot 2026-01-05 085956" src="https://github.com/user-attachments/assets/5960dede-f968-4865-98d8-bdd6fe57874b" />
+
+Figure 1.5: Initial state of Horizontal Pod Autoscaler (HPA) showing low CPU utilization and minimum replica configuration before load generation.
+
+<img width="1586" height="890" alt="Screenshot 2026-01-05 085734" src="https://github.com/user-attachments/assets/a309ac25-bda7-43bc-97b6-3f6d08fd4636" />
+
+Figure 1.6: Docker Desktop interface displaying running containers, including the Minikube cluster and microservice containers for Order, Payment, and Notification services.
+
+---
+
+## 17. Contact 📬
 
 For any queries or support, feel free to reach out:
 
