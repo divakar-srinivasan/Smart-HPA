@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: smart-hpa-controller
+server:
+  port: 8090

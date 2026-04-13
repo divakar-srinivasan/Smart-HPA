@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart HPA Dashboard</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dashboard-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px 8px;
+            text-align: center;
+        }
+
+        th {
+            background: #222;
+            color: #fff;
+        }
+
+        .priority-high {
+            background: #ffe5e5;
+        }
+
+        .priority-medium {
+            background: #fff9e5;
+        }
+
+        .priority-low {
+            background: #e5ffe5;
+        }
+
+        tr:nth-child(even) td {
+            background: #f9f9f9;
+        }
+
+        .cpu {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <h1>Smart HPA Cluster Dashboard</h1>
+        <div th:if="${resourceExhausted}"
+            style="background:#ffcccc;color:#a00;padding:12px;border-radius:6px;margin-bottom:18px;text-align:center;font-weight:bold;">
+            ALERT: Cluster resources are nearing exhaustion! One or more services have CPU usage above 90%.
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Priority</th>
+                    <th>CPU Usage (%)</th>
+                    <th>Replicas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="service : ${services}"
+                    th:classappend="${service.priority} == 'HIGH' ? 'priority-high' : (${service.priority} == 'MEDIUM' ? 'priority-medium' : 'priority-low')">
+                    <td th:text="${service.serviceName}"></td>
+                    <td th:text="${service.priority}"></td>
+                    <td th:text="${#numbers.formatDecimal(service.cpuUsage, 1, 2)}" class="cpu"></td>
+                    <td th:text="${service.replicas}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align:center; margin-top:20px; color:#888;">Dashboard auto-refreshes every 5 seconds.<br>Powered
+            by Smart HPA Controller</p>
+    </div>
+</body>
+
+</html>
