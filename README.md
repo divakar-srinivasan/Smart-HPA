@@ -671,8 +671,13 @@ Contributions should preserve the repository’s core intent: demonstrating **pr
 
 ---
 
-## 16. License
+##16. Contact
 
-No license file is present in this repository.
+For any queries or support, feel free to reach out:
+- **Email**: sdivakar2005@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/divakar-srinivasan/
+- **GitHub**: [divakar-srinivasan](https://github.com/divakar-srinivasan)
 
-Until a license is added, the default assumption should be that all rights are reserved by the repository owner.
+---
+
+Made with ❤️ by DIVAKAR S.
